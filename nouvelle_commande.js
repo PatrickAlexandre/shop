@@ -13,26 +13,34 @@ let cart = [];
 
     // Mettre à jour l'affichage du panier
     function updateCart() {
-      const cartItems = document.getElementById('cart-items');
-      const cartTotal = document.getElementById('cart-total');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const cartContainer = document.getElementById('cart'); // Obtenir le conteneur du panier
 
-      cartItems.innerHTML = '';
-      let total = 0;
+    cartItems.innerHTML = '';
+    let total = 0;
 
-      cart.forEach(item => {
+    cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
 
         const cartItem = document.createElement('li');
         cartItem.classList.add('flex', 'justify-between', 'items-center');
         cartItem.innerHTML = `
-          <span>${item.name} (x${item.quantity})</span>
-          <span>${itemTotal.toFixed(2)} €</span>
+        <span>${item.name} (x${item.quantity})</span>
+        <span>${itemTotal.toFixed(2)} €</span>
         `;
         cartItems.appendChild(cartItem);
-      });
+    });
 
-      cartTotal.textContent = total.toFixed(2) + ' €';
+    cartTotal.textContent = total.toFixed(2) + ' €';
+
+    // Affiche ou masque le panier en fonction de son contenu
+    if (cart.length > 0) {
+        cartContainer.classList.remove('hidden');
+    } else {
+        cartContainer.classList.add('hidden');
+    }
     }
 
     // Ouvrir le modal

@@ -28,7 +28,7 @@
     <p>Je suis Patrick Alexandre Assis, passionné de physique, d’informatique, de bricolage et de jardinage. Mon parcours atypique m’a permis de développer une approche unique et innovante, combinant rigueur scientifique et passion créative. Je suis ici pour offrir des solutions qui améliorent votre quotidien, des produits conçus avec soin et des conseils pratiques adaptés à vos besoins.</p>
   </section>
 
-  <!-- Nos Produits et Mes Services -->
+  <!-- Nos Produits et Nos Services -->
   <div class="container mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-8">
 
     <!-- Nos Produits -->
@@ -61,49 +61,99 @@
 
     <!-- Mes Services -->
     <section class="bg-white p-8 rounded-lg shadow">
-      <h2 class="text-2xl font-semibold mb-6">Mes Services</h2>
-      <div id="service-list" class="grid grid-cols-1 gap-6">
+    <h2 class="text-2xl font-semibold mb-6">Mes Services</h2>
+    <div id="service-list" class="grid grid-cols-1 gap-6">
         <div class="border p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-xl font-bold">Consultation en Physique Appliquée</h3>
-          <p>Expertise scientifique pour résoudre des défis techniques, avec une analyse approfondie.</p>
-          <p class="text-lg font-semibold my-4">49.99 € / heure</p>
-          <button onclick="addToCart('Consultation Physique', 49.99)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
+        <h3 class="text-xl font-bold">Création de Site Web et Logo</h3>
+        <p>Conception professionnelle de sites web et de logos pour mettre en valeur votre identité de marque.</p>
+        <p class="text-lg font-semibold my-4">75.00 €</p>
+        <button onclick="addToCart('Création Site Web et Logo', 75.00)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
         </div>
         <div class="border p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-xl font-bold">Atelier de Bricolage et Jardinage</h3>
-          <p>Atelier pratique pour découvrir des techniques de bricolage et de jardinage.</p>
-          <p class="text-lg font-semibold my-4">29.99 €</p>
-          <button onclick="addToCart('Atelier Bricolage et Jardinage', 29.99)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
+        <h3 class="text-xl font-bold">Formation en Informatique</h3>
+        <p>Cours pour apprendre la programmation, la cybersécurité, et plus encore.</p>
+        <p class="text-lg font-semibold my-4">39.99 € / heure</p>
+        <button onclick="addToCart('Formation Informatique', 39.99)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
+        </div>        
+        <div class="border p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-bold">Atelier de Jardinage et Bricolage</h3>
+        <p>Atelier pratique pour découvrir des techniques de jardinage et de bricolage.</p>
+        <p class="text-lg font-semibold my-4">29.99 €</p>
+        <button onclick="addToCart('Atelier Bricolage et Jardinage', 29.99)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
         </div>
         <div class="border p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
-          <h3 class="text-xl font-bold">Formation en Informatique</h3>
-          <p>Cours pour apprendre la programmation, la cybersécurité, et plus encore.</p>
-          <p class="text-lg font-semibold my-4">39.99 € / heure</p>
-          <button onclick="addToCart('Formation Informatique', 39.99)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
+        <h3 class="text-xl font-bold">Réparation d'iPhone</h3>
+        <p>Services de réparation pour tous les modèles d'iPhone, incluant écran, batterie et plus.</p>
+        <p class="text-lg font-semibold my-4">50.00 €</p>
+        <button onclick="addToCart('Réparation iPhone', 50.00)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
         </div>
-      </div>
+        <div class="border p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-bold">Réparation de PC</h3>
+        <p>Réparation de matériel et logiciels pour PC, optimisation des performances et mise à jour du système.</p>
+        <p class="text-lg font-semibold my-4">60.00 €</p>
+        <button onclick="addToCart('Réparation PC', 60.00)" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">Réserver</button>
+        </div>
+    </div>
     </section>
   </div>
 
   <!-- Panier et modal de commande -->
-
-  <aside class="fixed bottom-0 right-0 bg-white p-6 shadow-lg w-80 rounded-t-lg">
+    <aside id="cart" class="fixed bottom-0 right-0 bg-white p-6 shadow-lg w-80 rounded-t-lg hidden">
     <h2 class="text-xl font-bold mb-4">Votre Panier</h2>
     <ul id="cart-items" class="space-y-3"></ul>
     <p class="mt-4 font-semibold">Total : <span id="cart-total">0.00 €</span></p>
     <button onclick="openModal()" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Valider mon Panier</button>
-  </aside>
+    </aside>
 
-  <!-- Modal de commande -->
-  <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white p-8 rounded-lg w-11/12 max-w-md">
-      <h2 class="text-xl font-bold mb-6">Envoyer la Commande</h2>
-      <button onclick="sendOrderViaWhatsApp()" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition mb-3">Envoyer via WhatsApp</button>
-      <button onclick="sendOrderViaEmail()" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition mb-3">Envoyer par Email</button>
-      <button onclick="sendOrderViaSms()" class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition mb-3">Envoyer par SMS</button>
-      <button onclick="closeModal()" class="w-full mt-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">Annuler</button>
-    </div>
-  </div>
+            <!-- Modal Confirmer le Panier-->
+            <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg w-11/12 max-w-md">
+                <h2 class="text-xl font-bold mb-6">Envoie ta Commande</h2>
+
+                <!-- Groupement des boutons pour les méthodes d'envoi -->
+                <div class="space-y-3 mb-6">
+                <button onclick="sendOrderViaWhatsApp()" class="w-full flex items-center justify-center bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition shadow-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Via WhatsApp
+                </button>
+                <button onclick="sendOrderViaEmail()" class="w-full flex items-center justify-center bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+                    <i class="fas fa-envelope mr-2"></i> Par Email
+                </button>
+                <button onclick="sendOrderViaSms()" class="w-full flex items-center justify-center bg-gray-600 text-white py-3 px-4 rounded-lg hover:bg-gray-700 transition shadow-lg">
+                    <i class="fas fa-sms mr-2"></i> Par SMS
+                </button>
+                </div>
+
+                <!-- Groupement des boutons pour planifier et annuler -->
+                <div class="space-y-3">
+                <button onclick="openSchedule()" class="w-full flex items-center justify-center bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition shadow-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i> Planifier un rendez-vous
+                </button>
+                <button onclick="closeModal()" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">
+                    Annuler
+                </button>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- Google Calendar Appointment Scheduling iframe -->
+            <div id="scheduleIframe" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg w-11/12 max-w-2xl">
+                <button onclick="closeSchedule()" class="text-red-600 font-bold text-lg mb-4 hover:underline">Fermer</button>
+                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1parZxiWx2CORp8qZNNkZde_HK0_yUtn7JPwvKG5etYw_wnH-LUFpJ4kwZYbUAmYxB-W_U6NXE?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+            </div>
+
+            <script>
+            function openSchedule() {
+                document.getElementById('scheduleIframe').classList.remove('hidden');
+            }
+
+            function closeSchedule() {
+                document.getElementById('scheduleIframe').classList.add('hidden');
+            }
+            </script>
+
 
   <script src="nouvelle_commande.js"></script>
 </body>
