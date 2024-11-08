@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrick Alexandre Assis - Développeur Passionné à Paris</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+  <!-- Section d'accueil -->
+  <header class="bg-blue-600 text-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl font-bold">Bienvenue dans le Monde de Patrick Alexandre Assis</h1>
+      <p class="mt-4 text-xl">Explorez les domaines du codage, de la physique, de la psychologie, du commerce et de la biologie avec Patrick Alexandre, passionné et innovateur d'origine portugaise.</p>
+    </div>
+  </header>
+
+  <!-- Introduction: Pourquoi ?, Comment ?, Ce que j'ai à vous proposer -->
+  <section class="py-16 px-6 bg-gray-800 text-white">
+    <div class="max-w-4xl mx-auto text-center space-y-12">
+      <div class="space-y-4">
+        <i class="fas fa-question-circle text-5xl text-yellow-500"></i>
+        <h2 class="text-3xl font-semibold">Pourquoi ?</h2>
+        <p class="text-lg">La curiosité, l'innovation et l'envie de comprendre le monde sont au cœur de chaque projet que j'entreprends. Mon parcours varié m'apporte une perspective unique et me pousse à aller toujours plus loin.</p>
+      </div>
+      <div class="space-y-4">
+        <i class="fas fa-cogs text-5xl text-yellow-500"></i>
+        <h2 class="text-3xl font-semibold">Comment ?</h2>
+        <p class="text-lg">Grâce à une approche méthodique et créative, j'aborde chaque projet avec rigueur pour offrir des solutions efficaces et personnalisées dans divers domaines.</p>
+      </div>
+      <div class="space-y-4">
+        <i class="fas fa-handshake text-5xl text-yellow-500"></i>
+        <h2 class="text-3xl font-semibold">Ce que j'ai à vous proposer dès à présent</h2>
+        <p class="text-lg">Des services variés, adaptés à vos besoins, incluant le développement de sites web, des consultations en physique et des sessions de coaching psychologique pour des solutions qui font la différence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mes Services Proposés -->
+    <section id="services" class="py-16 px-6 bg-gray-800 text-white">
+    <div class="max-w-4xl mx-auto">
+        <!-- Titre de la section -->
+        <h2 class="text-3xl font-semibold text-center mb-12">Mes Services Proposés</h2>
+
+        <!-- Services pour personnes à faibles revenus -->
+        <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-8 text-yellow-500 text-center hidden">Services pour personnes à faibles revenus</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Service : Aide Alimentaire et Vestimentaire -->
+            <article class="service-card">
+            <i class="fas fa-hands-helping text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Aide Alimentaire et Vestimentaire</h3>
+            <p class="text-lg">Distribution de denrées alimentaires et de vêtements pour soutenir les personnes en situation de précarité.</p>
+            <button onclick="sendOrderSms('Aide Alimentaire et Vestimentaire')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Conseil en Gestion Budgétaire -->
+            <article class="service-card">
+            <i class="fas fa-piggy-bank text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Conseil en Gestion Budgétaire</h3>
+            <p class="text-lg">Ateliers et consultations pour aider à gérer les finances personnelles et optimiser les ressources disponibles.</p>
+            <button onclick="sendOrderSms('Conseil en Gestion Budgétaire')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Accès aux Prestations Sociales -->
+            <article class="service-card">
+            <i class="fas fa-file-alt text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Accès aux Prestations Sociales</h3>
+            <p class="text-lg">Assistance pour identifier et accéder aux aides sociales disponibles, telles que le RSA ou les allocations logement.</p>
+            <button onclick="sendOrderSms('Accès aux Prestations Sociales')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Soutien à l'Insertion Professionnelle -->
+            <article class="service-card">
+            <i class="fas fa-briefcase text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Soutien à l'Insertion Professionnelle</h3>
+            <p class="text-lg">Formations et ateliers pour faciliter le retour à l'emploi, incluant la rédaction de CV et des simulations d'entretiens.</p>
+            <button onclick="sendOrderSms('Soutien à l\'Insertion Professionnelle')" class="service-button">En savoir plus</button>
+            </article>
+
+        </div>
+        </div>
+
+        <!-- Séparateur -->
+        <div class="border-t border-gray-600 my-8"></div>
+
+        <!-- Services pour personnes aisées financièrement -->
+        <div>
+        <h3 class="text-2xl font-semibold mb-8 text-yellow-500 text-center hidden">Services pour personnes aisées financièrement</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Service : Gestion de Patrimoine et Investissement -->
+            <article class="service-card">
+            <i class="fas fa-chart-line text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Gestion de Patrimoine et Investissement</h3>
+            <p class="text-lg">Conseils personnalisés en gestion de patrimoine, optimisation fiscale et stratégies d'investissement.</p>
+            <button onclick="sendOrderSms('Gestion de Patrimoine et Investissement')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Coaching en Développement Personnel -->
+            <article class="service-card">
+            <i class="fas fa-user-tie text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Coaching en Développement Personnel</h3>
+            <p class="text-lg">Sessions de coaching axées sur le leadership, la gestion du stress et l'équilibre vie professionnelle/vie personnelle.</p>
+            <button onclick="sendOrderSms('Coaching en Développement Personnel')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Consultation en Art et Collection -->
+            <article class="service-card">
+            <i class="fas fa-palette text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Consultation en Art et Collection</h3>
+            <p class="text-lg">Conseils pour l'acquisition d'œuvres d'art, la constitution de collections et l'investissement dans des pièces de valeur.</p>
+            <button onclick="sendOrderSms('Consultation en Art et Collection')" class="service-button">En savoir plus</button>
+            </article>
+
+            <!-- Service : Organisation de Voyages sur Mesure -->
+            <article class="service-card">
+            <i class="fas fa-plane-departure text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-4">Organisation de Voyages sur Mesure</h3>
+            <p class="text-lg">Planification de voyages exclusifs et personnalisés, incluant des expériences uniques et des destinations haut de gamme.</p>
+            <button onclick="sendOrderSms('Organisation de Voyages sur Mesure')" class="service-button">En savoir plus</button>
+            </article>
+
+        </div>
+        </div>
+    </div>
+    </section>
+
+  <section class="py-16 px-6 bg-gray-800 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-8 hidden">Prendre un rendez-vous</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service: Développement Web -->
+        <article class="service-card">
+          <i class="fas fa-laptop-code text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Développement Web</h3>
+          <p class="text-lg">Création de sites web modernes et performants, adaptés aux besoins des entreprises et des particuliers.</p>
+          <button onclick="sendOrderSms('Développement Web')" class="service-button">Acheter maintenant</button>
+        </article>
+
+        <!-- Service: Consultation en Physique -->
+        <article class="service-card">
+          <i class="fas fa-atom text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Consultation en Physique</h3>
+          <p class="text-lg">Sessions de consultation en physique pour une compréhension approfondie et des solutions personnalisées.</p>
+          <button onclick="sendOrderSms('Consultation en Physique')" class="service-button">Acheter maintenant</button>
+        </article>
+
+        <!-- Service: Coaching Psychologique -->
+        <article class="service-card">
+          <i class="fas fa-brain text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-4">Coaching Psychologique</h3>
+          <p class="text-lg">Accompagnement en psychologie pour le développement personnel et professionnel.</p>
+          <button onclick="sendOrderSms('Coaching Psychologique')" class="service-button">Acheter maintenant</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 bg-black text-yellow-500">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Contactez Patrick</h2>
+      <p class="text-lg mb-8">Pour toute collaboration ou discussion, contactez-moi via le formulaire ci-dessous.</p>
+      <form onsubmit="sendSms(event)" class="space-y-4 max-w-md mx-auto">
+        <input type="text" id="name" placeholder="Votre nom" class="form-input" required>
+        <input type="email" id="email" placeholder="Votre email" class="form-input" required>
+        <textarea id="message" placeholder="Votre message" class="form-input" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold transition transform hover:scale-105">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-900 text-white text-center">
+    <p>&copy; 2024 Patrick Alexandre Assis. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="scripts.js"></script>
+
+  <!-- Styles intégrés pour simplification -->
+  <style>
+
+    .service-card {
+        background-color: #1a1a1a;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .service-card:hover {
+        transform: scale(1.05);
+    }
+    .service-button {
+        margin-top: 1rem;
+        background-color: #1d4ed8;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s;
+    }
+    .service-button:hover {
+        background-color: #2563eb;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #333;
+      color: white;
+      border-radius: 0.5rem;
+    }
+
+  </style>
+
+</body>
+</html>
